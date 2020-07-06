@@ -51,6 +51,27 @@ body {
     margin: 0;
 }
 
+h1 {
+    margin: 0px;
+    font-size: 3rem;
+    font-weight: 300;
+    color: hsl(233, 26%, 24%);
+}
+
+h2 {
+    margin: 0px;
+    font-size: 2rem;
+    font-weight: 300;
+    color: hsl(233, 26%, 24%);
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #909090;
+    line-height: 1.5rem;
+    margin-top: 30px;
+}
 
 .container {
     max-width: 1110px;
@@ -65,6 +86,8 @@ body {
 nav {
     background: hsl(0, 0%, 100%);
     padding: 20px 0;
+    position: relative;
+    z-index: 5;
 }
 
 nav .container {
@@ -77,13 +100,14 @@ nav .container {
     list-style-type: none;
 }
 .menu a {
-     color: #989898;
+     color: #A8A8A8;
      text-decoration: none;
-     font-size: 15px;
+     font-size: 14px;
+     
      
  }
 .item {
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 ul {
@@ -92,7 +116,6 @@ ul {
   }
 
 .cta {
-    font-weight: 300;
     font-size: 15px;
     padding: 10px 37px;
     cursor: pointer;
@@ -105,17 +128,46 @@ ul {
 }
 
 .cta a {
+    font-weight: 400;
     color: hsl(0, 0%, 98%);
     text-decoration: none;
 }
 
 /* 3. Hero */
-.hero {
+.hero-section {
     background-color: hsl(0, 0%, 98%);
+    min-height: 650px;
+    background-image: url("images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 375% 75%;
+}
+
+.hero-section .container .inner {
+    max-width: 460px;
+    padding-top: 75px;
+}
+
+.hero-img {
+    position: absolute;
+    top: -7%;
+    right: -56%;
+    width: 100%;
+    z-index: 0;
 }
 /* 4. Benefits */
+.benefits-section {
+    background-color: hsl(220, 16%, 96%);
+}
+
 /* 5. Articles */
+.articles-section {
+    background-color: hsl(0, 0%, 98%);
+}
 /* 6. Footer */
+footer {
+    background-color: hsl(233, 26%, 24%);
+}
 /* Responsive */
 
 @media (min-width: 768px) {
