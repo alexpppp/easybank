@@ -41,7 +41,7 @@
 
 
 
-/* Global Styles */
+/********** GLOBAL STYLES **********/
 body {
     margin: 0;
     font-family: 'Public Sans', sans-serif;
@@ -80,7 +80,7 @@ p {
 }
 
 a:hover {
-    color: hsl(136, 65%, 51%);
+    color: #30bd80;
 }
 main {
     overflow: hidden;
@@ -102,7 +102,7 @@ main {
     margin-left: -10px;
 }
 
-/* 2. Navbar */
+/********** 2. NAVBAR **********/
 nav {
     background: hsl(0, 0%, 100%);
     padding: 20px 0;
@@ -117,14 +117,14 @@ nav .container {
 }
 
 .menu {
+    display: flex;
     list-style-type: none;
 }
+
 .menu a {
      color: #A8A8A8;
      text-decoration: none;
      font-size: 14px;
-     
-     
  }
 .item {
     padding: 10px 15px;
@@ -153,13 +153,16 @@ ul {
     text-decoration: none;
 }
 
-/* 3. Hero */
+.cta:hover {
+    opacity: .6;
+}
+
+/********** 3. HERO **********/
 .hero-section {
     background-color: hsl(0, 0%, 98%);
     min-height: 650px;
     background-image: url("images/bg-intro-desktop.svg");
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: 375% 75%;
 }
 
@@ -175,7 +178,7 @@ ul {
     width: 100%;
     z-index: 0;
 }
-/* 4. Benefits */
+/********** 4. BENEFITS **********/
 .benefits-section {
     background-color: hsl(220, 16%, 96%);
     padding: 6rem 0 4.75rem 0;
@@ -190,7 +193,7 @@ ul {
     padding: 10px 9px;
 }
 
-/* 5. Articles */
+/********** 5. ARTICLES **********/
 .articles-section {
     background-color: hsl(0, 0%, 98%);
     padding: 6rem 0 4.75rem 0;
@@ -231,11 +234,58 @@ ul {
     margin: 13px 0 8px 0;;
 }
 
-/* 6. Footer */
+/********** 6. FOOTER **********/
 footer {
     background-color: hsl(233, 26%, 24%);
+    padding: 2.35rem 0;
 }
-/* Responsive */
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .container .last {
+    flex-grow: 2;
+    text-align: -webkit-right;
+}
+
+footer .social {
+    margin-top: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer-menu {
+    list-style-type: none;
+    padding-left: 6rem;
+}
+
+.footer-menu li {
+    padding: 6px;
+}
+
+.footer-menu a {
+     color: #F0F0F0;
+     font-weight: 300;
+     text-decoration: none;
+     font-size: 14px;
+ }
+
+ .footer-menu a:hover {
+    color: #30bd80;
+}
+
+.copyright {
+    margin-top: 1.4rem;
+    opacity: .6;
+    font-size: 15px;
+    color: #A9A9A9;
+}
+
+/********** RESPONSIVE **********/
 
 @media (min-width: 768px) {
     .container{
