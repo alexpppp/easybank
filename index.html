@@ -30,10 +30,20 @@
                 <li class="item"><a href="#">Blog</a></li>
                 <li class="item"><a href="#">Careers</a></li>
             </ul>
-            <a href="#"><img src="images/icon-hamburger.svg" class="hamburger"></a>
-            <button class="cta"><a href="#">Request Invite</a></button>
+            <span class="toggle"><a href="#"><img src="images/icon-hamburger.svg" id="toggle-icon"></a></span>
+            <!--  images/icon-close.svg" -->
+            <button class="cta cta-nav"><a href="#">Request Invite</a></button>
         </div>
     </nav>
+    <div class="mobileNav">
+        <ul class="mobileMenu">
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">About</a></li>
+            <li class="item"><a href="#">Contact</a></li>
+            <li class="item"><a href="#">Blog</a></li>
+            <li class="item"><a href="#">Careers</a></li>
+        </ul>
+    </div>
     <main>
         <!-- HERO SECTION -->
         <section class="hero-section">
@@ -169,12 +179,31 @@
             </div>
             
             <div class="item last">
-                <button class="cta"><a href="#">Request Invite</a></button>
+                <button class="cta"><a href="toggle">Request Invite</a></button>
                 
                 <p class="copyright">© Easybank. All Rights Reserved</p>
             </div>
 
         </div>
     </footer>
+    <script>
+        const toggle = document.querySelector(".toggle");
+        const mobileNav = document.querySelector(".mobileNav");
+
+        toggle.addEventListener("click", toggleMenu, true);
+
+        // Toggle mobile navigation
+        function toggleMenu() {
+            if (mobileNav.classList.contains("active")) {
+                mobileNav.classList.remove("active")
+                toggle.querySelector("#toggle-icon").setAttribute("src", "images/icon-hamburger.svg")
+            } else {
+                mobileNav.classList.add("active")
+                toggle.querySelector("#toggle-icon").setAttribute("src", "images/icon-close.svg")
+            }
+        }
+
+        
+    </script>
 </body>
 </html>

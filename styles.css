@@ -125,6 +125,45 @@ nav .container {
      text-decoration: none;
      font-size: 14px;
  }
+
+.mobileNav {
+    display: none;
+    height: 100%;
+}
+
+.mobileMenu {
+    margin: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    list-style-type: none;
+    height: 13rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.mobileMenu .item a {
+    text-decoration: none;
+    color: hsl(233, 26%, 24%);
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 8rem;
+}
+.mobileMenu .item:hover  {
+    background-color: #F8F8F8;
+}
+
+.active {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    background-color: rgb(45,49,77,0.3);
+}
+
+
 .item {
     padding: 10px 15px;
 }
@@ -134,14 +173,18 @@ ul {
     padding: 0;
   }
 
-.menu a:hover:after {
+.menu a:after {
     content: '';
     display: block;
     position: relative;
-    background: linear-gradient(82deg, rgba(49,211,92,1) 1%, rgba(43,183,218,1) 100%); 
+    background: hsl(0, 0%, 100%); 
     height: 4px;
     width: 100%;
     bottom: -30px;
+  }
+
+.menu a:hover:after {
+    background: linear-gradient(82deg, rgba(49,211,92,1) 1%, rgba(43,183,218,1) 100%); 
   }
 
 .cta {
@@ -166,7 +209,7 @@ ul {
     opacity: .6;
 }
 
-.hamburger {
+.toggle {
     display: none;
 }
 
@@ -178,7 +221,7 @@ ul {
 
 .hero-section .container .inner {
     max-width: 450px;
-    padding: 4rem 0;
+    padding: 7rem 0;
 }
 
 .hero-bg-mobile {
@@ -221,7 +264,7 @@ ul {
     padding: 10px 9px;
     width: 100%;
     flex-basis: 260px;
-    flex-grow: 1;
+    flex-grow: 0.5;
     align-self: stretch;
 }
 
@@ -237,7 +280,7 @@ ul {
     flex-direction: column;
     margin-top: 3rem;
     flex-basis: 250px;
-    flex-grow: 1;
+    flex-grow: 0.7;
     flex-wrap: wrap;
 }
 
@@ -347,16 +390,24 @@ footer .social img {
 }
 
 @media (max-width: 992px) {
+    h1 {font-size: 2.5rem;}
+    h2 {font-size: 2rem;}
+    h3 {font-size: 1.2rem;}
+    h4 {font-size: 1.3rem;}
+    h6 {font-size: 1rem;}
+    
     .container{
         width: 760px;
       }
-    .cta {
+    .cta-nav {
         display: none;
     }
+
     .menu {
         display: none;
     }
-    .hamburger {
+    
+    .toggle {
         display: block;
     }
     .hero-bg-desktop {
@@ -378,6 +429,42 @@ footer .social img {
     .hero-section .container .inner {
         text-align: center;
     }
+    .benefits-section {
+        text-align: center;
+    }
+    .benefits-section .container .inner {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .articles-section .container h2 {
+        text-align: center;
+    }
+    footer .container {
+        text-align: center;
+        flex-direction: column;
+    }
+    footer .container .item:nth-child(2) {
+        padding: 1.5rem 0 0 0;
+      }
+
+    footer .container .item:nth-child(3) {
+        padding: 0 0 1.5rem 0;
+      }
+
+    footer .social {
+        margin-top: 1.8rem;
+        width: 10rem;
+    }
+    footer .social img {
+        margin-right: 0;
+    }
+    .footer-menu  {
+        padding: 0 0;
+    }
+
+    footer .container .last {
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -393,16 +480,12 @@ footer .social img {
         position: absolute;
         z-index: 0;
         right: 0rem;
-        top: 4.5rem;
+        top: 3.5rem;
     }
 }
 
 @media (max-width: 600px) {
     .container{
       width: 400px;
-    }
-    footer .container {
-        text-align: center;
-        flex-direction: column;
     }
   }
