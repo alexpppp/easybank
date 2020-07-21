@@ -336,11 +336,6 @@ footer .social {
     justify-content: space-between;
 }
 
-footer .social img {
-    margin-right: 15px;
-}
-
-
 .footer-menu {
     list-style-type: none;
     padding-left: 6rem;
@@ -368,9 +363,11 @@ footer .social img {
     color: #A9A9A9;
 }
 
+svg path:hover {
+    fill: #2fc19c;
+  }
+
 /********** RESPONSIVE **********/
-
-
 @media (max-width: 1200px) {
     .container{
         width: 960px;
@@ -455,9 +452,7 @@ footer .social img {
         margin-top: 1.8rem;
         width: 10rem;
     }
-    footer .social img {
-        margin-right: 0;
-    }
+    
     .footer-menu  {
         padding: 0 0;
     }
